@@ -5,8 +5,8 @@ File.read(lib_file) =~ /\bVERSION\s*=\s*["'](.+?)["']/
 version = $1
 
 Gem::Specification.new do |spec|
-  spec.add_dependency "excon", "~> 0.42", ">= 0.42.1"
-  spec.add_dependency "hurley", "~> 0.1", ">= 0.1"
+  spec.add_runtime_dependency "excon", "~> 0.42", ">= 0.42.1"
+  spec.add_runtime_dependency "hurley", "~> 0.1", ">= 0.1"
   spec.authors = ["Rick Olson"]
   spec.description = %q{Excon connection for Hurley.}
   spec.email = %w(technoweenie@gmail.com)
