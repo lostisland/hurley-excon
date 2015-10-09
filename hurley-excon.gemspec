@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/lostisland/hurley-excon"
   dev_null    = File.exist?("/dev/null") ? "/dev/null" : "NUL"
   git_files   = `git ls-files -z 2>#{dev_null}`
-  spec.files &= git_files.split("\0") if $?.success?
+  spec.files = git_files.split("\0") if $?.success?
   spec.test_files = Dir.glob("test/**/*.rb")
   spec.licenses = ["MIT"]
   spec.name = lib
