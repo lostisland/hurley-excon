@@ -1,7 +1,7 @@
 require "excon"
 
 module HurleyExcon
-  VERSION = "0.0.1"
+  VERSION = "0.0.2"
   METHODS = Hash.new do |hash, key|
     key.to_s.upcase
   end
